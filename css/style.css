@@ -3042,17 +3042,6 @@ input[type=number] {
   text-align: center;
   position: relative;
 }
-.netko-wrapper .netko-result .netko-solution .netko-solution-example h3::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 63.52px;
-  height: 2px;
-  background: rgb(0, 148, 68);
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 .netko-wrapper .netko-result .netko-solution .netko-solution-example span {
   max-width: 80%;
   width: 80%;

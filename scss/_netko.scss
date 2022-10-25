@@ -813,17 +813,17 @@
           font-size: 19.0562px;
           text-align: center;
           position: relative;
-          &::after {
-            position: absolute;
-            display: block;
-            content: "";
-            width: 63.52px;
-            height: 2px;
-            background: rgba(0, 148, 68, 1);
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-          }
+          // &::after {
+          //   position: absolute;
+          //   display: block;
+          //   content: "";
+          //   width: 63.52px;
+          //   height: 2px;
+          //   background: rgba(0, 148, 68, 1);
+          //   bottom: -8px;
+          //   left: 50%;
+          //   transform: translateX(-50%);
+          // }
         }
         span {
           max-width: 80%;
