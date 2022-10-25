@@ -1,0 +1,575 @@
+.viettleco-wrapper {
+  font-family: "Be Vietnam Pro", sans-serif;
+  overflow-x: hidden;
+  .container {
+    width: 1320px;
+    max-width: 100%;
+  }
+  .viettleco-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #02040e;
+    text-transform: uppercase;
+  }
+  .primary-text {
+    color: #00a280 !important;
+  }
+  .white-text {
+    color: white !important;
+  }
+  .header-block {
+    .header-inner {
+      .container {
+        .header-logo.not-top {
+          display: none;
+        }
+      }
+      .menu-link {
+        &::after {
+          background-color: white;
+        }
+        &:hover {
+          color: white;
+          &::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+      .menu-toggle {
+        background-color: white;
+        & > div {
+          background-color: black;
+          border: none;
+        }
+        & > div:first-child {
+          background-color: #fff;
+          div {
+            background-color: black;
+          }
+        }
+      }
+      &.hide {
+        .menu-toggle {
+          background-color: #00a280;
+          & > div {
+            background-color: white;
+            border: none;
+          }
+          & > div:first-child {
+            background-color: #00a280;
+            div {
+              background-color: white;
+            }
+          }
+        }
+      }
+      &.not-top {
+        padding: 20px 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        color: white;
+        .container {
+          color: black;
+          .header-logo {
+            display: none;
+            &.not-top {
+              display: block;
+            }
+          }
+          a:hover {
+            color: #00a280;
+          }
+        }
+        .menu-toggle {
+          background-color: #00a280;
+          & > div {
+            background-color: white;
+            border: none;
+          }
+          & > div:first-child {
+            background-color: #00a280;
+            div {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+    .header-menu {
+      .menu-main {
+        .category {
+          .content {
+            a:hover {
+              color: #00a280;
+            }
+          }
+        }
+      }
+      .menu-bottom {
+        .item.socials {
+          a:hover {
+            color: #00a280;
+          }
+        }
+      }
+    }
+  }
+  .viettleco-banner {
+    background-image: url("../img/viettleco/banner.png");
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &--title {
+      position: absolute;
+      top: 287px;
+      width: 590px;
+      height: 256px;
+      left: 60px;
+      color: white;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 64px;
+      max-width: 100%;
+      @media (max-width: 978px) {
+        left: 20px;
+        top: 200px;
+        padding-right: 20px;
+      }
+    }
+    &--list {
+      display: flex;
+      gap: 64px;
+      width: 679px;
+      position: absolute;
+      bottom: 40px;
+      left: 80px;
+      flex-wrap: wrap;
+      max-width: 100%;
+      @media (max-width: 978px) {
+        left: 20px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }
+  .viettleco-introduction {
+    margin-top: 160px;
+    .viettleco-title {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 40px;
+      color: #02040e;
+      margin-bottom: 16px;
+      @media (max-width: 789px) {
+        text-align: center;
+      }
+    }
+    .viettleco-content {
+      width: 524px;
+      max-width: 100%;
+      p {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &--data {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media (max-width: 840px) {
+        justify-content: flex-start;
+        gap: 50px;
+      }
+      .viettleco-introduction--data__item {
+        display: flex;
+        span {
+          font-weight: 600;
+          font-size: 100px;
+          line-height: 108px;
+          color: #00a280;
+          @media (max-width: 478px) {
+            font-size: 60px;
+          }
+        }
+      }
+      div {
+        .viettleco-introduction--data__number {
+          font-weight: 600;
+          font-size: 100px;
+          line-height: 108px;
+          color: #00a280;
+          @media (max-width: 478px) {
+            font-size: 60px;
+          }
+        }
+        span {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 28px;
+          color: #9a9b9f;
+        }
+      }
+    }
+  }
+  .viettleco-target {
+    margin-top: 160px;
+    .viettleco-target--items {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      column-gap: 220px;
+      @media (max-width: 900px) {
+        margin-top: 60px;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      .viettleco-target--item {
+        h2 {
+          margin: 16px 0 8px 0;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #02040e;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #67686e;
+        }
+      }
+    }
+  }
+  .viettleco-colors {
+    margin-top: 160px;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    &--left {
+      width: 40%;
+      flex: 0 0 40%;
+      @media (max-width: 900px) {
+        flex-grow: 1;
+      }
+      p {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #67686e;
+      }
+    }
+    &--right {
+      width: 60%;
+      flex: 0 0 60%;
+      @media (max-width: 900px) {
+        flex-grow: 1;
+      }
+      p {
+        margin-bottom: 8px;
+      }
+      &__color-blocks {
+        display: flex;
+        align-items: center;
+
+        .viettleco-colors--right__color-block {
+          background: #00a280;
+          height: 280px;
+          width: 50%;
+          position: relative;
+          @media (max-width: 900px) {
+          }
+          &.dark-color {
+            background: #213449;
+          }
+          &--details {
+            position: absolute;
+            bottom: 20px;
+            left: 24px;
+            p {
+              color: #e6e6e7;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 26px;
+            }
+            span {
+              color: #e6e6e7;
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .viettleco-fonts {
+    margin-top: 160px;
+    background: linear-gradient(180deg, #00a280 0%, #213449 100%);
+    padding: 104px 60px;
+    @media (max-width: 1400px) {
+      padding: 90px 20px;
+    }
+    @media (max-width: 789px) {
+      padding: 40px 10px;
+    }
+    .viettleco-fonts--inner {
+      display: flex;
+      column-gap: 79px;
+      align-items: center;
+      @media (max-width: 1400px) {
+        flex-wrap: wrap;
+      }
+      .viettleco-fonts--inner__left {
+        width: 50%;
+        flex: 0 0 50%;
+        @media (max-width: 1400px) {
+          width: 100%;
+          flex: 0 0 100%;
+          margin-bottom: 40px;
+        }
+        p {
+          margin-top: 16px;
+          font-size: 16px;
+          line-height: 24px;
+          color: #e6e6e7;
+        }
+      }
+      .viettleco-fonts--inner__right {
+        width: 50%;
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        @media (max-width: 1400px) {
+          width: 100%;
+          flex: 0 0 100%;
+        }
+        @media (max-width: 628px) {
+          flex-wrap: wrap;
+        }
+        &--main-characters {
+          font-weight: 600;
+          font-size: 200px;
+          line-height: 208px;
+          color: #ffffff;
+        }
+        &--extra-characters {
+          p {
+            font-size: 20px;
+            line-height: 28px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .viettleco-result {
+    margin: 160px 0 64px 0;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+
+    .viettleco-result--title {
+      text-align: center;
+      h1 {
+        margin-bottom: 16px;
+      }
+      p {
+        width: 654px;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0 auto;
+      }
+    }
+    .viettleco-result-pattern {
+      position: absolute;
+      z-index: -1;
+      img {
+        height: 1095px;
+      }
+      &-3 {
+        bottom: 200px;
+        left: 0;
+      }
+      &-2 {
+        right: 0;
+        bottom: 1800px;
+      }
+    }
+    &-bg {
+      background: linear-gradient(180deg, #00a280 0%, #213449 100%),
+        linear-gradient(0deg, #213449, #213449);
+      clip-path: polygon(0 3%, 100% 26%, 100% 100%, 0% 100%);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+    .viettleco-review {
+      position: relative;
+      .viettleco-screen {
+        border: 24px solid #000000;
+        background: #000000;
+        border-radius: 24px;
+        min-height: 90vh;
+        overflow: hidden;
+        position: relative;
+        transform: translateY(40px);
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        @media (max-width: 1024px) {
+          overflow-y: auto;
+          min-height: 90vh;
+        }
+        &--inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #000000;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 24px 24px 0 0;
+          }
+          img:nth-child(2) {
+            border-radius: 0 0 24px 24px;
+          }
+        }
+      }
+    }
+    .viettleco-result-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 100px;
+      @media (max-width: 1280px) {
+        flex-wrap: wrap;
+      }
+      img:first-child {
+        height: 585px;
+        width: 287px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+      }
+      img:last-child {
+        height: 705px;
+        width: 967px;
+        border-radius: 0px;
+        @media (max-width: 900px) {
+          margin-top: 30px;
+          max-width: 100%;
+          flex: 0 0 100%;
+          width: unset;
+          height: unset;
+        }
+      }
+    }
+  }
+  .viettleco-two-ipads {
+    display: flex;
+    justify-content: space-between;
+    padding: 164px 0;
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+      padding: 70px 0;
+      gap: 40px;
+    }
+    img {
+      max-width: 50%;
+      flex: 0 0 50%;
+      @media (max-width: 900px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+  }
+  .viettleco-responsive {
+    background: linear-gradient(180deg, #00a280 0%, #213449 100%);
+    padding: 100px 0;
+    .viettleco-responsive--inner {
+      display: flex;
+      gap: 40px;
+      @media (max-width: 789px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    &--title {
+      width: 30%;
+      @media (max-width: 789px) {
+        width: 100%;
+      }
+      h1 {
+        margin-bottom: 16px;
+        color: white;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        color: #e6e6e7;
+      }
+    }
+    &--items {
+      width: 70%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @media (max-width: 789px) {
+        gap: 40px;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .footer-block {
+    .container {
+      .footer-main {
+        a:hover {
+          color: #00a280;
+        }
+
+        span:hover {
+          color: #00a280;
+        }
+        .dropdown-toggle:hover {
+          span {
+            color: #00a280;
+          }
+          path {
+            stroke: #00a280;
+          }
+        }
+        .dropdown-toggle.show {
+          span {
+            color: #00a280;
+          }
+          path {
+            stroke: #00a280;
+          }
+        }
+        .dropdown-item {
+          &:hover {
+            color: #00a280 !important;
+          }
+        }
+      }
+    }
+  }
+}
