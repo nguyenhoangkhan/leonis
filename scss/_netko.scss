@@ -7,6 +7,12 @@
     line-height: 56px;
     text-transform: uppercase;
     color: #02040e;
+    @media (max-width: 1024px) {
+      font-size: 40px !important;
+    }
+    @media (max-width: 600px) {
+      font-size: 30px !important;
+    }
   }
   .container {
     width: 1320px;
@@ -21,10 +27,11 @@
       }
 
       .menu-link {
+        color: white;
         &::after {
           background-color: white;
         }
-        color: white;
+
         &:hover {
           color: white;
           &::after {
@@ -69,8 +76,14 @@
           color: black;
           .header-logo {
             display: none;
-            &.not-top {
-              display: block;
+          }
+          .header-logo.not-top {
+            display: block;
+          }
+          .menu-link {
+            color: #757575;
+            &::after {
+              background-color: green;
             }
           }
           a:hover {
@@ -119,6 +132,9 @@
     width: 100%;
     position: relative;
     margin-bottom: 258px;
+    @media (max-width: 767px) {
+      margin-bottom: 200px;
+    }
     .banner-decorate {
       position: absolute;
       top: 7px;
@@ -144,12 +160,27 @@
       &--logo {
         text-align: center;
         margin-bottom: 24px;
+        @media (max-width: 1200px) {
+          margin-bottom: 34px;
+        }
+        @media (max-width: 768px) {
+          margin-bottom: 50px;
+        }
       }
       &--subtitle {
+        max-width: 100%;
         text-align: center;
         color: #e6e6e7;
         font-weight: 600px;
         font-size: 36px;
+        @media (max-width: 1024px) {
+          font-size: 30px;
+          line-height: 28px;
+        }
+        @media (max-width: 600px) {
+          font-size: 19px;
+          line-height: 28px;
+        }
       }
     }
     .banner-box {
@@ -192,39 +223,43 @@
       max-width: 100%;
       transform: translate(-50%, 50%);
       width: 1024px;
-      height: 585px;
+      max-width: 100%;
       border: 24px solid #000000;
       background-color: #000000;
       border-radius: 24px;
       @media (max-width: 1240px) {
         margin-bottom: 80px;
       }
-      @media (max-width: 1060px) {
-        width: 800px;
-      }
-      @media (max-width: 840px) {
-        width: 750px;
-      }
+
       @media (max-width: 768px) {
         border: 12px solid #000000;
-        transform: translate(-50%, 0px);
-        height: 350px;
+        transform: translate(-50%, 10%);
+        width: 450px;
+      }
+      @media (max-width: 468px) {
+        width: 370px;
+        transform: translate(-50%, 0);
       }
 
-      // overflow: hidden;
-      img {
+      .banner-image-item {
         border-radius: 24px;
-        width: 100%;
-        height: 100%;
+        padding-top: 57%;
+        background-size: cover;
+        background-position: center;
+        @media (max-width: 768px) {
+          padding-top: 90%;
+        }
       }
     }
   }
   .netko-introduction {
     margin-bottom: 58px;
-
     @media (max-width: 1240px) {
       transform: translateY(0px);
       text-align: center;
+    }
+    @media (max-width: 1024px) {
+      margin-bottom: 0;
     }
     @media (max-width: 768px) {
       transform: translateY(-160px);
@@ -242,7 +277,9 @@
       margin-left: auto;
       @media (max-width: 1240px) {
         margin: 0 auto;
-        margin-bottom: 100px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 30px;
       }
 
       h1 {
@@ -252,14 +289,22 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 28px;
+        @media (max-width: 768px) {
+          font-size: 18px;
+        }
+        @media (max-width: 600px) {
+          font-size: 16px;
+        }
       }
     }
   }
   .netko-target {
     margin-bottom: 92px;
-
+    @media (max-width: 1200px) {
+      margin-bottom: 60px;
+    }
     @media (max-width: 420px) {
-      margin-bottom: 20px;
+      margin-bottom: 0px;
     }
     h1 {
       margin-bottom: 40px;
@@ -277,10 +322,18 @@
       justify-content: space-between;
       align-items: center;
       @media (max-width: 840px) {
-        transform: translateY(-90px);
         margin-bottom: 0;
         flex-wrap: wrap;
         gap: 10px;
+      }
+      @media (max-width: 600px) {
+        transform: translateY(-90px);
+      }
+      @media (max-width: 768px) {
+        margin-top: -100px;
+      }
+      @media (max-width: 600px) {
+        margin-top: -40px;
       }
       @media (max-width: 420px) {
         gap: 20px;
@@ -308,6 +361,9 @@
     }
   }
   .netko-style-guide {
+    @media (max-width: 768px) {
+      margin-top: -40px;
+    }
     h1 {
       text-align: center;
       margin-bottom: 52px;
@@ -333,14 +389,14 @@
       justify-content: center;
       gap: 80px;
       flex-wrap: wrap;
-      @media (max-width: 1240px) {
-        gap: 60px;
+      @media (max-width: 1200px) {
+        gap: 20px;
       }
       @media (max-width: 768px) {
-        gap: 40px;
+        gap: 24px;
         justify-content: flex-start;
       }
-      @media (max-width: 468px) {
+      @media (max-width: 600px) {
         gap: 20px;
       }
 
@@ -349,6 +405,10 @@
         padding: 16px 36px;
         border-radius: 16px;
         background-color: #eeeeee;
+        @media (max-width: 1200px) {
+          flex: 0 0 33.333%;
+          max-width: 33.333%;
+        }
         @media (max-width: 768px) {
           flex: 0 0 40%;
           max-width: 40%;
@@ -404,10 +464,9 @@
         &__color {
           display: flex;
           gap: 23px;
-          @media (max-width: 1080px) {
+          @media (max-width: 1200px) {
             flex-wrap: wrap;
             margin-top: 20px;
-            justify-content: center;
           }
           div {
             background-color: #009444;
@@ -460,6 +519,9 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 80px;
+      @media (max-width: 1200px) {
+        margin-bottom: 0;
+      }
       @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
@@ -480,8 +542,13 @@
         font-size: 24px;
         line-height: 32px;
         color: white;
+        @media (max-width: 1200px) {
+          font-size: 18px;
+        }
+
         @media (max-width: 768px) {
           width: 100%;
+          font-size: 16px;
         }
       }
     }
@@ -681,6 +748,9 @@
     .netko-solution {
       margin-top: 180px;
       position: relative;
+      @media (max-width: 1200px) {
+        margin-top: 80px;
+      }
       .netko-services--ipad__decorate {
         position: absolute;
         right: 0;
@@ -698,6 +768,9 @@
         color: #231f20;
         @media (max-width: 998px) {
           display: block;
+        }
+        @media (max-width: 600px) {
+          font-size: 28px;
         }
       }
       .netko-services--ipad {
@@ -838,6 +911,12 @@
     .netko-solution-footer {
       margin-top: 200px;
       position: relative;
+      @media (max-width: 1200px) {
+        margin-top: 100px;
+      }
+      @media (max-width: 600px) {
+        margin-top: 50px;
+      }
       &--decorate {
         position: absolute;
         top: 0;
@@ -867,6 +946,9 @@
             font-weight: 600;
             font-size: 36px;
             color: #231f20;
+            @media (max-width: 600px) {
+              font-size: 28px;
+            }
           }
           & > div {
             border: 17.4757px solid #000000;
@@ -886,6 +968,9 @@
     .netko-other {
       margin-top: 250px;
       position: relative;
+      @media (max-width: 1200px) {
+        margin-top: 100px;
+      }
       &--decorate {
         position: absolute;
         right: 0;
@@ -910,6 +995,9 @@
           width: 100%;
           position: static;
           margin-top: 90px !important;
+        }
+        @media (max-width: 600px) {
+          margin-top: 40px !important;
         }
         h3 {
           margin-bottom: 20px;

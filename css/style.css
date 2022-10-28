@@ -307,6 +307,9 @@ input[type=number] {
   transform: translateY(-50%);
 }
 
+.header-block {
+  font-family: "Nunito", sans-serif !important;
+}
 .header-block .header-inner {
   padding: 40px 0;
   position: fixed;
@@ -746,6 +749,7 @@ input[type=number] {
 }
 
 .footer-block {
+  font-family: "Nunito", sans-serif !important;
   padding: 48px 0;
 }
 .footer-block .footer-main {
@@ -2182,6 +2186,16 @@ input[type=number] {
   text-transform: uppercase;
   color: #02040e;
 }
+@media (max-width: 1024px) {
+  .netko-wrapper .netko-title {
+    font-size: 40px !important;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-title {
+    font-size: 30px !important;
+  }
+}
 .netko-wrapper .container {
   width: 1320px;
   max-width: 100%;
@@ -2242,6 +2256,12 @@ input[type=number] {
 .netko-wrapper .header-block .header-inner.not-top .container .header-logo.not-top {
   display: block;
 }
+.netko-wrapper .header-block .header-inner.not-top .container .menu-link {
+  color: #757575;
+}
+.netko-wrapper .header-block .header-inner.not-top .container .menu-link::after {
+  background-color: green;
+}
 .netko-wrapper .header-block .header-inner.not-top .container a:hover {
   color: green;
 }
@@ -2271,6 +2291,11 @@ input[type=number] {
   width: 100%;
   position: relative;
   margin-bottom: 258px;
+}
+@media (max-width: 767px) {
+  .netko-wrapper .netko-banner {
+    margin-bottom: 200px;
+  }
 }
 .netko-wrapper .netko-banner .banner-decorate {
   position: absolute;
@@ -2303,11 +2328,34 @@ input[type=number] {
   text-align: center;
   margin-bottom: 24px;
 }
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-banner .banner-title--logo {
+    margin-bottom: 34px;
+  }
+}
+@media (max-width: 768px) {
+  .netko-wrapper .netko-banner .banner-title--logo {
+    margin-bottom: 50px;
+  }
+}
 .netko-wrapper .netko-banner .banner-title--subtitle {
+  max-width: 100%;
   text-align: center;
   color: #e6e6e7;
   font-weight: 600px;
   font-size: 36px;
+}
+@media (max-width: 1024px) {
+  .netko-wrapper .netko-banner .banner-title--subtitle {
+    font-size: 30px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-banner .banner-title--subtitle {
+    font-size: 19px;
+    line-height: 28px;
+  }
 }
 .netko-wrapper .netko-banner .banner-box {
   position: absolute;
@@ -2352,7 +2400,7 @@ input[type=number] {
   max-width: 100%;
   transform: translate(-50%, 50%);
   width: 1024px;
-  height: 585px;
+  max-width: 100%;
   border: 24px solid #000000;
   background-color: #000000;
   border-radius: 24px;
@@ -2362,27 +2410,29 @@ input[type=number] {
     margin-bottom: 80px;
   }
 }
-@media (max-width: 1060px) {
-  .netko-wrapper .netko-banner .banner-image {
-    width: 800px;
-  }
-}
-@media (max-width: 840px) {
-  .netko-wrapper .netko-banner .banner-image {
-    width: 750px;
-  }
-}
 @media (max-width: 768px) {
   .netko-wrapper .netko-banner .banner-image {
     border: 12px solid #000000;
-    transform: translate(-50%, 0px);
-    height: 350px;
+    transform: translate(-50%, 10%);
+    width: 450px;
   }
 }
-.netko-wrapper .netko-banner .banner-image img {
+@media (max-width: 468px) {
+  .netko-wrapper .netko-banner .banner-image {
+    width: 370px;
+    transform: translate(-50%, 0);
+  }
+}
+.netko-wrapper .netko-banner .banner-image .banner-image-item {
   border-radius: 24px;
-  width: 100%;
-  height: 100%;
+  padding-top: 57%;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .netko-wrapper .netko-banner .banner-image .banner-image-item {
+    padding-top: 90%;
+  }
 }
 .netko-wrapper .netko-introduction {
   margin-bottom: 58px;
@@ -2391,6 +2441,11 @@ input[type=number] {
   .netko-wrapper .netko-introduction {
     transform: translateY(0px);
     text-align: center;
+  }
+}
+@media (max-width: 1024px) {
+  .netko-wrapper .netko-introduction {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 768px) {
@@ -2413,7 +2468,11 @@ input[type=number] {
 @media (max-width: 1240px) {
   .netko-wrapper .netko-introduction--content {
     margin: 0 auto;
-    margin-bottom: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .netko-wrapper .netko-introduction--content {
+    margin-bottom: 30px;
   }
 }
 .netko-wrapper .netko-introduction--content h1 {
@@ -2424,12 +2483,27 @@ input[type=number] {
   font-size: 20px;
   line-height: 28px;
 }
+@media (max-width: 768px) {
+  .netko-wrapper .netko-introduction--content p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-introduction--content p {
+    font-size: 16px;
+  }
+}
 .netko-wrapper .netko-target {
   margin-bottom: 92px;
 }
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-target {
+    margin-bottom: 60px;
+  }
+}
 @media (max-width: 420px) {
   .netko-wrapper .netko-target {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 }
 .netko-wrapper .netko-target h1 {
@@ -2454,10 +2528,24 @@ input[type=number] {
 }
 @media (max-width: 840px) {
   .netko-wrapper .netko-target--content {
-    transform: translateY(-90px);
     margin-bottom: 0;
     flex-wrap: wrap;
     gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-target--content {
+    transform: translateY(-90px);
+  }
+}
+@media (max-width: 768px) {
+  .netko-wrapper .netko-target--content {
+    margin-top: -100px;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-target--content {
+    margin-top: -40px;
   }
 }
 @media (max-width: 420px) {
@@ -2488,6 +2576,11 @@ input[type=number] {
   font-size: 16px;
   line-height: 24px;
 }
+@media (max-width: 768px) {
+  .netko-wrapper .netko-style-guide {
+    margin-top: -40px;
+  }
+}
 .netko-wrapper .netko-style-guide h1 {
   text-align: center;
   margin-bottom: 52px;
@@ -2514,18 +2607,18 @@ input[type=number] {
   gap: 80px;
   flex-wrap: wrap;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1200px) {
   .netko-wrapper .netko-style-guide--fonts {
-    gap: 60px;
+    gap: 20px;
   }
 }
 @media (max-width: 768px) {
   .netko-wrapper .netko-style-guide--fonts {
-    gap: 40px;
+    gap: 24px;
     justify-content: flex-start;
   }
 }
-@media (max-width: 468px) {
+@media (max-width: 600px) {
   .netko-wrapper .netko-style-guide--fonts {
     gap: 20px;
   }
@@ -2535,6 +2628,12 @@ input[type=number] {
   padding: 16px 36px;
   border-radius: 16px;
   background-color: #eeeeee;
+}
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-style-guide--fonts-item {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
 }
 @media (max-width: 768px) {
   .netko-wrapper .netko-style-guide--fonts-item {
@@ -2596,11 +2695,10 @@ input[type=number] {
   display: flex;
   gap: 23px;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .netko-wrapper .netko-style-guide--colors-item__color {
     flex-wrap: wrap;
     margin-top: 20px;
-    justify-content: center;
   }
 }
 .netko-wrapper .netko-style-guide--colors-item__color div {
@@ -2646,6 +2744,11 @@ input[type=number] {
   justify-content: space-between;
   margin-bottom: 80px;
 }
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-result--title {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 768px) {
   .netko-wrapper .netko-result--title {
     flex-direction: column;
@@ -2671,9 +2774,15 @@ input[type=number] {
   line-height: 32px;
   color: white;
 }
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-result--title p {
+    font-size: 18px;
+  }
+}
 @media (max-width: 768px) {
   .netko-wrapper .netko-result--title p {
     width: 100%;
+    font-size: 16px;
   }
 }
 .netko-wrapper .netko-result .netko-review {
@@ -2894,6 +3003,11 @@ input[type=number] {
   margin-top: 180px;
   position: relative;
 }
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-result .netko-solution {
+    margin-top: 80px;
+  }
+}
 .netko-wrapper .netko-result .netko-solution .netko-services--ipad__decorate {
   position: absolute;
   right: 0;
@@ -2913,6 +3027,11 @@ input[type=number] {
 @media (max-width: 998px) {
   .netko-wrapper .netko-result .netko-solution .netko-solution-main-title {
     display: block;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-result .netko-solution .netko-solution-main-title {
+    font-size: 28px;
   }
 }
 .netko-wrapper .netko-result .netko-solution .netko-services--ipad {
@@ -3056,6 +3175,16 @@ input[type=number] {
   margin-top: 200px;
   position: relative;
 }
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-result .netko-solution-footer {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-result .netko-solution-footer {
+    margin-top: 50px;
+  }
+}
 .netko-wrapper .netko-result .netko-solution-footer--decorate {
   position: absolute;
   top: 0;
@@ -3092,6 +3221,11 @@ input[type=number] {
   font-size: 36px;
   color: #231f20;
 }
+@media (max-width: 600px) {
+  .netko-wrapper .netko-result .netko-solution-footer--content__item h2 {
+    font-size: 28px;
+  }
+}
 .netko-wrapper .netko-result .netko-solution-footer--content__item > div {
   border: 17.4757px solid #000000;
   background-color: #000000;
@@ -3106,6 +3240,11 @@ input[type=number] {
 .netko-wrapper .netko-result .netko-other {
   margin-top: 250px;
   position: relative;
+}
+@media (max-width: 1200px) {
+  .netko-wrapper .netko-result .netko-other {
+    margin-top: 100px;
+  }
 }
 .netko-wrapper .netko-result .netko-other--decorate {
   position: absolute;
@@ -3133,6 +3272,11 @@ input[type=number] {
     width: 100%;
     position: static;
     margin-top: 90px !important;
+  }
+}
+@media (max-width: 600px) {
+  .netko-wrapper .netko-result .netko-other .netko-other-item {
+    margin-top: 40px !important;
   }
 }
 .netko-wrapper .netko-result .netko-other .netko-other-item h3 {

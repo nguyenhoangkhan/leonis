@@ -315,6 +315,8 @@ input[type="number"] {
   }
 }
 .header-block {
+  font-family: "Nunito", sans-serif !important;
+
   .header-inner {
     padding: 40px 0;
     position: fixed;
@@ -777,6 +779,7 @@ input[type="number"] {
   }
 }
 .footer-block {
+  font-family: "Nunito", sans-serif !important;
   padding: 48px 0;
   .footer-main {
     display: flex;
