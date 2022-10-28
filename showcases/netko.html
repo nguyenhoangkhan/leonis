@@ -24,6 +24,8 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="../css/locomotive-scroll.css" />
+
     <!-- MAIN CSS  -->
     <link rel="stylesheet" href="../css/style.css?v=20221017" />
 
@@ -984,7 +986,12 @@
         </div>
         <div class="netko-review container">
           <div class="netko-screen" id="showcase-screen" data-aos="flip-up">
-            <div class="netko-screen--inner">
+            <div
+              data-scroll
+              class="netko-screen--inner"
+              id="screen-inner"
+              data-scroll-call="SCREEN-SCROLL"
+            >
               <img src="../img/netko/result1.png" alt="" />
               <img src="../img/netko/result2.png" alt="" />
             </div>
@@ -2659,23 +2666,25 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 
-    <!-- LOTTIE ANIMATION  -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
     <!-- MAIN JS  -->
     <script type="module" src="../js/app.js"></script>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
       $(document).ready(function () {
-        const tween = new TimelineLite();
+        // AOS.init({ duration: 1000, offset: 0, once: true });
 
-        let w = window.innerWidth;
-        if (w < 1024) {
-          return;
-        }
+        const tween = new TimelineLite();
 
         let screenInnerHeight = $(".netko-screen--inner").height();
         let netkoScreenHeigt = $(".netko-screen").height();
+
+        $(window).resize(function () {
+          screenInnerHeight = $(".netko-screen--inner").height();
+          netkoScreenHeigt = $(".netko-screen").height();
+        });
 
         tween.add(
           tween.to(".netko-screen--inner", {
@@ -2691,20 +2700,29 @@
 
         const controller = new ScrollMagic.Controller();
 
-        new ScrollMagic.Scene({
+        let blockScroll = new ScrollMagic.Scene({
           triggerElement: ".netko-screen",
-          duration: 5000,
+          duration: 4000,
           triggerHook: 0,
         })
           .setTween(tween)
           .setPin(".netko-screen")
           .addTo(controller);
+
+        function sizeAll() {
+          var w = window.innerWidth;
+
+          if (w < 1024) {
+            blockScroll.enabled(false);
+            gsap.killTweensOf(".netko-screen--inner");
+          } else {
+            blockScroll.enabled(true);
+          }
+        }
+
+        $(window).resize(sizeAll);
+        sizeAll();
       });
-    </script>
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000, offset: 0, once: true });
     </script>
   </body>
 </html>
