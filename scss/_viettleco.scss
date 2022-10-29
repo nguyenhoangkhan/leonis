@@ -1,16 +1,22 @@
 .viettleco-wrapper {
   font-family: "Be Vietnam Pro", sans-serif;
   overflow-x: hidden;
-  .container {
-    width: 1320px;
-    max-width: 100%;
-  }
+  // .container {
+  //   width: 1320px;
+  //   max-width: 100%;
+  // }
   .viettleco-title {
     font-weight: 600;
     font-size: 32px;
     line-height: 40px;
     color: #02040e;
     text-transform: uppercase;
+    @media (max-width: 1024px) {
+      font-size: 40px !important;
+    }
+    @media (max-width: 600px) {
+      font-size: 30px !important;
+    }
   }
   .primary-text {
     color: #00a280 !important;
@@ -29,6 +35,7 @@
         &::after {
           background-color: white;
         }
+        color: white;
         &:hover {
           color: white;
           &::after {
@@ -52,13 +59,13 @@
       }
       &.hide {
         .menu-toggle {
-          background-color: #00a280;
+          background-color: #064866;
           & > div {
             background-color: white;
             border: none;
           }
           & > div:first-child {
-            background-color: #00a280;
+            background-color: #064866;
             div {
               background-color: white;
             }
@@ -77,18 +84,24 @@
               display: block;
             }
           }
+          .menu-link {
+            color: #757575;
+          }
           a:hover {
-            color: #00a280;
+            color: #064866;
+            &::after {
+              background: #064866;
+            }
           }
         }
         .menu-toggle {
-          background-color: #00a280;
+          background-color: #064866;
           & > div {
             background-color: white;
             border: none;
           }
           & > div:first-child {
-            background-color: #00a280;
+            background-color: #064866;
             div {
               background-color: white;
             }
@@ -101,7 +114,7 @@
         .category {
           .content {
             a:hover {
-              color: #00a280;
+              color: #064866;
             }
           }
         }
@@ -109,7 +122,7 @@
       .menu-bottom {
         .item.socials {
           a:hover {
-            color: #00a280;
+            color: #064866;
           }
         }
       }
@@ -117,9 +130,7 @@
   }
   .viettleco-banner {
     background-image: url("../img/viettleco/banner.png");
-    width: 100%;
-    max-width: 100%;
-    height: 100vh;
+    padding-top: 71%;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -128,16 +139,27 @@
       top: 287px;
       width: 590px;
       height: 256px;
-      left: 60px;
       color: white;
       font-weight: 600;
       font-size: 48px;
       line-height: 64px;
       max-width: 100%;
-      @media (max-width: 978px) {
-        left: 20px;
-        top: 200px;
-        padding-right: 20px;
+      @media (max-width: 1024px) {
+        top: 150px;
+        font-size: 38px;
+      }
+      @media (max-width: 768px) {
+        top: 130px;
+        font-size: 30px;
+      }
+      @media (max-width: 615px) {
+        position: static;
+        transform: translateY(-180px) !important;
+      }
+      @media (max-width: 398px) {
+        font-size: 30px;
+        line-height: 36px;
+        transform: translateY(-90px) !important;
       }
     }
     &--list {
@@ -146,21 +168,41 @@
       width: 679px;
       position: absolute;
       bottom: 40px;
-      left: 80px;
       flex-wrap: wrap;
       max-width: 100%;
-      @media (max-width: 978px) {
-        left: 20px;
+      @media (max-width: 714px) {
+        gap: 30px;
+        bottom: 20px;
+      }
+      @media (max-width: 615px) {
+        gap: 10px;
       }
       p {
         font-weight: 400;
         font-size: 20px;
         color: white;
+        margin-bottom: 0;
+        @media (max-width: 714px) {
+          font-size: 16px;
+        }
+        @media (max-width: 615px) {
+          position: static;
+          font-size: 14px;
+        }
       }
     }
   }
   .viettleco-introduction {
     margin-top: 160px;
+    @media (max-width: 1024px) {
+      margin-top: 70px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 50px;
+    }
+    @media (max-width: 468px) {
+      margin-top: 30px;
+    }
     .viettleco-title {
       font-weight: 600;
       font-size: 32px;
@@ -178,6 +220,9 @@
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
       }
     }
     &--data {
@@ -196,8 +241,15 @@
           font-size: 100px;
           line-height: 108px;
           color: #00a280;
-          @media (max-width: 478px) {
+          @media (max-width: 1024px) {
+            font-size: 80px;
+            line-height: 24px;
+          }
+          @media (max-width: 600px) {
             font-size: 60px;
+          }
+          @media (max-width: 478px) {
+            font-size: 40px;
           }
         }
       }
@@ -207,8 +259,15 @@
           font-size: 100px;
           line-height: 108px;
           color: #00a280;
-          @media (max-width: 478px) {
+          @media (max-width: 1024px) {
+            font-size: 80px;
+            line-height: 24px;
+          }
+          @media (max-width: 600px) {
             font-size: 60px;
+          }
+          @media (max-width: 478px) {
+            font-size: 40px;
           }
         }
         span {
@@ -216,12 +275,27 @@
           font-size: 20px;
           line-height: 28px;
           color: #9a9b9f;
+          @media (max-width: 1024px) {
+            font-size: 16px;
+          }
+          @media (max-width: 600px) {
+            font-size: 14px;
+          }
         }
       }
     }
   }
   .viettleco-target {
     margin-top: 160px;
+    @media (max-width: 1024px) {
+      margin-top: 70px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 50px;
+    }
+    @media (max-width: 468px) {
+      margin-top: 30px;
+    }
     .viettleco-target--items {
       margin-top: 40px;
       display: flex;
@@ -233,6 +307,9 @@
         flex-wrap: wrap;
         gap: 40px;
       }
+      @media (max-width: 600px) {
+        margin-top: 30px;
+      }
       .viettleco-target--item {
         h2 {
           margin: 16px 0 8px 0;
@@ -240,12 +317,18 @@
           font-size: 24px;
           line-height: 32px;
           color: #02040e;
+          @media (max-width: 600px) {
+            font-size: 18px;
+          }
         }
         p {
           font-weight: 400;
           font-size: 16px;
           line-height: 24px;
           color: #67686e;
+          @media (max-width: 600px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -255,10 +338,20 @@
     display: flex;
     align-items: center;
     gap: 36px;
+    @media (max-width: 1024px) {
+      margin-top: 70px;
+    }
     @media (max-width: 900px) {
       flex-wrap: wrap;
       gap: 40px;
     }
+    @media (max-width: 768px) {
+      margin-top: 50px;
+    }
+    @media (max-width: 468px) {
+      margin-top: 30px;
+    }
+
     &--left {
       width: 40%;
       flex: 0 0 40%;
@@ -270,6 +363,17 @@
         font-size: 16px;
         line-height: 24px;
         color: #67686e;
+        @media (max-width: 1024px) {
+          margin-top: 30px;
+          font-size: 16px;
+        }
+        @media (max-width: 768px) {
+          margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+          margin-top: 0;
+          font-size: 14px;
+        }
       }
     }
     &--right {
@@ -299,16 +403,26 @@
             position: absolute;
             bottom: 20px;
             left: 24px;
+            @media (max-width: 768px) {
+              bottom: 16px;
+              left: 20px;
+            }
             p {
               color: #e6e6e7;
               font-weight: 600;
               font-size: 20px;
               line-height: 26px;
+              @media (max-width: 768px) {
+                font-size: 16px;
+              }
             }
             span {
               color: #e6e6e7;
               font-size: 14px;
               line-height: 20px;
+              @media (max-width: 768px) {
+                font-size: 16px;
+              }
             }
           }
         }
@@ -318,13 +432,21 @@
   .viettleco-fonts {
     margin-top: 160px;
     background: linear-gradient(180deg, #00a280 0%, #213449 100%);
-    padding: 104px 60px;
+    padding: 104px 0;
     @media (max-width: 1400px) {
-      padding: 90px 20px;
+      padding: 90px 0;
     }
-    @media (max-width: 789px) {
-      padding: 40px 10px;
+    @media (max-width: 1024px) {
+      margin-top: 70px;
     }
+    @media (max-width: 768px) {
+      margin-top: 50px;
+      padding: 40px 0;
+    }
+    @media (max-width: 468px) {
+      margin-top: 30px;
+    }
+
     .viettleco-fonts--inner {
       display: flex;
       column-gap: 79px;
@@ -333,8 +455,6 @@
         flex-wrap: wrap;
       }
       .viettleco-fonts--inner__left {
-        width: 50%;
-        flex: 0 0 50%;
         @media (max-width: 1400px) {
           width: 100%;
           flex: 0 0 100%;
@@ -345,12 +465,17 @@
           font-size: 16px;
           line-height: 24px;
           color: #e6e6e7;
+
+          @media (max-width: 600px) {
+            font-size: 14px;
+          }
         }
       }
       .viettleco-fonts--inner__right {
-        width: 50%;
-        flex: 0 0 50%;
         display: flex;
+        width: 55%;
+        flex: 0 0 55%;
+
         align-items: center;
         column-gap: 16px;
         @media (max-width: 1400px) {
@@ -365,12 +490,20 @@
           font-size: 200px;
           line-height: 208px;
           color: #ffffff;
+          @media (max-width: 600px) {
+            line-height: 150px;
+          }
         }
+
         &--extra-characters {
           p {
             font-size: 20px;
             line-height: 28px;
             color: #ffffff;
+
+            @media (max-width: 600px) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -382,6 +515,19 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 100px;
+    @media (max-width: 1200px) {
+      margin-top: 60px;
+    }
+    @media (max-width: 1024px) {
+      margin-top: 40px;
+      gap: 30px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 60px;
+      padding-bottom: 50px;
+      gap: 20px;
+      margin-bottom: 0;
+    }
 
     .viettleco-result--title {
       text-align: center;
@@ -393,6 +539,11 @@
         font-size: 16px;
         line-height: 24px;
         margin: 0 auto;
+        max-width: 100%;
+
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
       }
     }
     .viettleco-result-pattern {
@@ -435,6 +586,9 @@
         @media (max-width: 1024px) {
           overflow-y: auto;
           min-height: 90vh;
+        }
+        @media (max-width: 600px) {
+          border: 18px solid #000000;
         }
         &--inner {
           position: absolute;
@@ -501,10 +655,17 @@
   .viettleco-responsive {
     background: linear-gradient(180deg, #00a280 0%, #213449 100%);
     padding: 100px 0;
+    @media (max-width: 768px) {
+      padding: 80px 0;
+    }
+    @media (max-width: 600px) {
+      padding: 50px 0;
+    }
     .viettleco-responsive--inner {
       display: flex;
       gap: 40px;
       @media (max-width: 789px) {
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
       }
@@ -522,6 +683,9 @@
         font-size: 16px;
         line-height: 24px;
         color: #e6e6e7;
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
       }
     }
     &--items {
@@ -530,6 +694,10 @@
       grid-template-columns: repeat(3, 1fr);
       @media (max-width: 789px) {
         gap: 40px;
+        width: 100%;
+      }
+      @media (max-width: 568px) {
+        gap: 10px;
         width: 100%;
       }
       img {
