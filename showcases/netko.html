@@ -2671,6 +2671,11 @@
 
     <script>
       $(document).ready(function () {
+        let w = window.innerWidth;
+        if (w < 1024) {
+          return;
+        }
+
         const tween = new TimelineLite();
 
         let screenInnerHeight = $(".netko-screen--inner").height();
@@ -2697,26 +2702,12 @@
 
         let blockScroll = new ScrollMagic.Scene({
           triggerElement: ".netko-screen",
-          duration: 4000,
+          duration: 3000,
           triggerHook: 0,
         })
           .setTween(tween)
           .setPin(".netko-screen")
           .addTo(controller);
-
-        function sizeAll() {
-          var w = window.innerWidth;
-
-          if (w < 1024) {
-            blockScroll.enabled(false);
-            gsap.killTweensOf(".netko-screen--inner");
-          } else {
-            blockScroll.enabled(true);
-          }
-        }
-
-        $(window).resize(sizeAll);
-        sizeAll();
       });
     </script>
     <!-- AOS -->
