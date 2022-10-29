@@ -4283,7 +4283,7 @@ input[type=number] {
 .twendee-wrapper .twendee-banner {
   padding-top: 73.62%;
   background: url("../img/twendee/banner.png") no-repeat center top;
-  background-size: contain;
+  background-size: cover;
   position: relative;
 }
 .twendee-wrapper .twendee-banner--list {
@@ -4326,6 +4326,19 @@ input[type=number] {
   .twendee-wrapper .twendee-banner--list {
     font-size: 10px;
     margin-bottom: -40px;
+  }
+}
+.twendee-wrapper .twendee-banner--list p {
+  margin-bottom: 0;
+}
+@media (max-width: 865px) {
+  .twendee-wrapper .twendee-banner--list p {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 572px) {
+  .twendee-wrapper .twendee-banner--list p {
+    margin-bottom: 20px;
   }
 }
 .twendee-wrapper .twendee-who {
