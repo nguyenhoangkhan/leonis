@@ -293,6 +293,9 @@
         transform: translateX(-50%);
         border-radius: 6px;
       }
+      @media (max-width: 768px) {
+        margin-bottom: 50px;
+      }
     }
     &--goal {
       width: 520px;
@@ -490,7 +493,7 @@
         margin-bottom: 20px;
       }
       @media (max-width: 600px) {
-        margin-bottom: 0;
+        margin-bottom: 5px;
       }
     }
     .twendee-guide-items--top {
@@ -609,6 +612,9 @@
           font-weight: 600;
           font-size: 24px;
           line-height: 32px;
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
         }
         &--index {
           position: absolute;
@@ -617,6 +623,9 @@
           z-index: 1;
           font-weight: 600;
           font-size: 24px;
+          @media (max-width: 768px) {
+            font-size: 16px;
+          }
         }
       }
     }
@@ -639,6 +648,9 @@
       @media (max-width: 1456px) {
         flex-wrap: wrap;
         justify-content: center;
+      }
+      @media (max-width: 768px) {
+        margin-top: 0;
       }
       &__left {
         font-size: 24px;
@@ -692,6 +704,9 @@
 
           @media (max-width: 600px) {
             font-size: 150px;
+          }
+          @media (max-width: 567px) {
+            font-size: 20px;
           }
         }
         span {
@@ -817,6 +832,12 @@
             margin-left: 0;
             font-size: 30px;
           }
+          @media (max-width: 567px) {
+            font-size: 28px;
+          }
+          @media (max-width: 398px) {
+            font-size: 24px;
+          }
         }
         span {
           position: absolute;
@@ -893,9 +914,13 @@
         @media (max-width: 768px) {
           font-size: 30px;
         }
-        @media (max-width: 528px) {
+        @media (max-width: 567px) {
           margin-left: 0;
           text-align: center;
+          font-size: 28px;
+        }
+        @media (max-width: 398px) {
+          font-size: 24px;
         }
       }
       span {
@@ -955,11 +980,14 @@
         margin-bottom: 0;
         margin-right: 80px;
         @media (max-width: 768px) {
-          font-size: 36px;
+          font-size: 30px;
           margin-right: 0;
         }
         @media (max-width: 567px) {
           font-size: 28px;
+        }
+        @media (max-width: 398px) {
+          font-size: 24px;
         }
       }
       span {
@@ -990,16 +1018,22 @@
 
           @media (max-width: 768px) {
             margin-left: 0;
-            font-size: 36px;
+            font-size: 30px;
           }
           @media (max-width: 567px) {
             font-size: 28px;
+          }
+          @media (max-width: 398px) {
+            font-size: 24px;
           }
         }
         span {
           left: 0;
           @media (max-width: 768px) {
             left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
           }
         }
       }
