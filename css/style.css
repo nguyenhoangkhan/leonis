@@ -2196,10 +2196,6 @@ input[type=number] {
     font-size: 30px !important;
   }
 }
-.netko-wrapper .container {
-  width: 1320px;
-  max-width: 100%;
-}
 .netko-wrapper .header-block .header-inner .container .header-logo.not-top {
   display: none;
 }
